@@ -278,7 +278,6 @@ header {
     flex-direction: column;
   }
 
-
   .work-arrow-2 a {
     font-size: 1.3rem;
     text-decoration: none;
@@ -551,4 +550,11 @@ header {
     min-width: 20rem;
     margin: 1.5rem auto;
   }
+}
+
+
+
+.navbar a.active {
+  background-color: #f0f0f0; /* Change this to your desired highlight color */
+  color: #333; /* Change this to your desired text color */
 }

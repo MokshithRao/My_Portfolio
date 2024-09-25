@@ -195,7 +195,7 @@ header {
 .contact {
   background: #07374a;
   position: relative;
-  height: 92vh;
+  height: 50vh;
 }
 
 .contact-content {
@@ -489,7 +489,7 @@ header {
 
 /* Card Styling */
 .card {
-  background-color: #fafafa;
+  background-color: #fbd9a9ba;
   height: auto;
   width: 100%;
   max-width: 450px;

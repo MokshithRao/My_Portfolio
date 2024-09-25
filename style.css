@@ -99,7 +99,8 @@ header {
   font-size: 2rem;
   font-weight: 600;
   color: #25b79f;
-  text-align: right;
+  /* text-align: center; */
+  padding: 25px 300px;
 }
 .about-me .about-content {
   display: flex;
@@ -114,7 +115,7 @@ header {
 }
 
 .skills-bar {
-  padding: 25px 30px;
+  padding: 25px 300px;
 }
 .skills-bar .bar {
   margin: 25px 0;

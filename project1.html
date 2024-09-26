@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Voice Assistant for Deaf n Dumb</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5eaea;
+        }
+        header {
+            background-color: #030303;
+            color: #f7f7f7;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .project-section {
+            background-color: #b6b5b5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .project-section:hover{
+            transform: scale(1.02);
+            background-color: #d4d4d4;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        h1 {
+            color: antiquewhite;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        .project-image {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .project-description {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .project-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .details {
+            width: 45%;
+        }
+        ul {
+            list-style-type: square;
+        }
+        .cta {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .cta:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+        /* Hover effect for only My Role section */
+        #my-role:hover {
+            transform: scale(1.02);
+            background-color: #d4d4d4;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Personal Voice Assistant for Deaf</h1>
+</header>
+
+<div class="container">
+
+    <div class="project-section">
+        <h2>Project Overview</h2>
+        <div class="project-details">
+            <div class="details">
+                <h3>Problem</h3>
+                <p>
+                    Communication difficulties between deaf people and those unfamiliar with sign language pose significant challenges. Existing methods are largely hardware-based, costly, and inefficient.
+                </p>
+            </div>
+            <div class="details">
+                <h3>Approach</h3>
+                <p>
+                    This project leverages NLP and AI to create a system that converts text to Indian Sign Language using manual and non-manual signs. It aims to provide an affordable, adaptable, and user-friendly solution.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-details">
+            <div class="details">
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>Python3</li>
+                    <li>SQL</li>
+                    <li>NLP</li>
+                    <li>Django</li>
+                    <li>Blender (for UI)</li>
+                </ul>
+            </div>
+            <div class="details">
+                <h3>Results</h3>
+                <p>
+                    The prototype successfully translates English to ISL, bridging the communication gap between deaf individuals and others. The system is efficient, scalable, and deployable across multiple platforms.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-section" id="my-role">
+        <h2>My Role</h2>
+        <p class="project-description">
+            As a core team member, I contributed to the development of the system by implementing the natural language processing (NLP) logic and integrating it with the sign language translation. I also worked on the database management using SQL and ensured smooth functionality across the platform, handling testing and debugging of the system's voice recognition features.
+        </p>
+    </div>
+
+    <div class="project-section" id="project-description">
+        <h2>Project Description</h2>
+        <p class="project-description">
+            The Personal Voice Assistant for Deaf is a solution designed to help hearing-impaired individuals communicate effectively through sign language recognition. It addresses the gap between normal people and those with impairments by translating English text into Indian Sign Language (ISL). This project was developed using Python, NLP, and various libraries, and tested on mobile/laptop devices with a microphone and internet for voice recognition.
+        </p>
+        <img src="pimg1.png" alt="Project Screenshot" class="project-image">
+    </div>
+
+</div>
+
+<footer>
+    <a href="index.html" class="cta">Back to Homepage</a>
+</footer>
+
+</body>
+</html>

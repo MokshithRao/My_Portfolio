@@ -99,7 +99,8 @@ header {
   font-size: 2rem;
   font-weight: 600;
   color: #25b79f;
-  text-align: right;
+  /* text-align: center; */
+  padding: 25px 300px;
 }
 .about-me .about-content {
   display: flex;
@@ -114,7 +115,7 @@ header {
 }
 
 .skills-bar {
-  padding: 25px 30px;
+  padding: 25px 300px;
 }
 .skills-bar .bar {
   margin: 25px 0;
@@ -195,7 +196,7 @@ header {
 .contact {
   background: #07374a;
   position: relative;
-  height: 92vh;
+  height: 50vh;
 }
 
 .contact-content {
@@ -276,7 +277,6 @@ header {
     justify-content: center;
     flex-direction: column;
   }
-
 
   .work-arrow-2 a {
     font-size: 1.3rem;
@@ -489,7 +489,7 @@ header {
 
 /* Card Styling */
 .card {
-  background-color: #fafafa;
+  background-color: #fbd9a9ba;
   height: auto;
   width: 100%;
   max-width: 450px;
@@ -542,7 +542,7 @@ header {
   color: #f0f0e6;
 }
 
-/* Responsive Styles for Cards */
+/* Responsive Styles for s */
 @media (max-width: 680px) {
   .card {
     width: auto;
@@ -550,4 +550,11 @@ header {
     min-width: 20rem;
     margin: 1.5rem auto;
   }
+}
+
+
+
+.navbar a.active {
+  background-color: #f0f0f0; /* Change this to your desired highlight color */
+  color: #333; /* Change this to your desired text color */
 }

@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en"></html>
 
 <head>
   <meta charset="UTF-8" />
@@ -128,7 +128,7 @@
             This project involved using Python along with popular libraries such as pandas, NumPy and scikit-learn. The process included 
             comprehensive data preprocessing to clean and prepare the data, exploratory data analysis to uncover insights, and the training 
             and evaluation of multiple classifiers to achieve accurate predictions.</p>
-          <button><a href="https://github.com/MokshithRao/Loan-Prediction-using-Machine-Learning-Algorithm" target="blank">View source <i
+          <button><a href="project2.html" target="blank">View source <i
             class="fas fa-external-link-alt"></i></a></button>
         </div>
         <!-- Add more cards as needed -->
@@ -198,40 +198,45 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 550) {
-          $('.navbar').addClass('solid');
-          $('.back-to-top').addClass('visible');
-        } else {
-          $('.navbar').removeClass('solid');
-          $('.back-to-top').removeClass('visible');
-        }
-
-      });
-    });
-  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      
-      $("a").on('click', function (event) {
-
-        
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function () {
-
-            window.location.hash = hash;
-          });
-        } 
-      });
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 550) {
+        $('.navbar').addClass('solid');
+        $('.back-to-top').addClass('visible');
+      } else {
+        $('.navbar').removeClass('solid');
+        $('.back-to-top').removeClass('visible');
+      }
     });
-  </script>
-</body>
 
+    // Handle smooth scrolling and active class on click
+    $("a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        // Remove 'active' class from all nav links
+        $('a').removeClass('active');
+
+        // Add 'active' class to the clicked nav link
+        $(this).addClass('active');
+
+        // Smooth scrolling animation
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+          // Optional: Update the URL hash without jumping to the anchor
+          window.location.hash = hash;
+        });
+      }
+    });
+
+    // Set the first link as active on page load, if desired
+    $('a').first().addClass('active');
+  });
+</script>
+
+</body>
 </html>

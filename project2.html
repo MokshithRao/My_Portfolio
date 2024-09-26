@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction Using Machine Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5eaea;
+        }
+        header {
+            background-color: #030303;
+            color: #f7f7f7;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .project-section {
+            background-color: #b6b5b5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        /* Hover effect for all sections */
+        #project-overview:hover, #my-role:hover, #project-description:hover {
+            transform: scale(1.02);
+            background-color: #d4d4d4;
+        }
+        h1{
+            color: antiquewhite;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        .project-image {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .project-description {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .project-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .details {
+            width: 45%;
+        }
+        ul {
+            list-style-type: square;
+        }
+        .cta {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .cta:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Loan Prediction Using Machine Learning</h1>
+</header>
+
+<div class="container">
+
+    <div class="project-section" id="project-overview">
+        <h2>Project Overview</h2>
+        <div class="project-details">
+            <div class="details">
+                <h3>Problem</h3>
+                <p>
+                    The banking system is significantly affected by loan defaulters. Predicting loan defaulters early can help banks reduce their Non-Performing Assets (NPA), and improve profitability.
+                </p>
+            </div>
+            <div class="details">
+                <h3>Approach</h3>
+                <p>
+                    Using machine learning algorithms, specifically Decision Trees and Logistic Regression, this project predicts loan defaulters by analyzing various attributes such as credit history, income, and loan amount.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-details">
+            <div class="details">
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>NumPy</li>
+                    <li>Pandas</li>
+                    <li>Scikit-learn</li>
+                    <li>Matplotlib</li>
+                </ul>
+            </div>
+            <div class="details">
+                <h3>Results</h3>
+                <p>
+                    The model achieved an accuracy of 81%, successfully identifying patterns in creditworthiness. It helped to predict potential loan defaulters and optimized the bank’s loan approval process.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-section" id="my-role">
+        <h2>My Role</h2>
+        <p class="project-description">
+            I was responsible for building and optimizing the machine learning models. I implemented the Decision Tree and Logistic Regression algorithms using Python and handled data preprocessing, model training, and evaluation. I also collaborated on designing the project's data flow and testing the model for real-world accuracy.
+        </p>
+    </div>
+
+    <div class="project-section" id="project-description">
+        <h2>Project Description</h2>
+        <p class="project-description">
+            This project aims to predict loan approvals using machine learning. By analyzing past loan records and various personal attributes such as credit history and income, the model identifies potential defaulters. The system uses datasets to develop a Decision Tree-based classifier and a Logistic Regression model for better prediction of the loan default probability.
+        </p>
+        <img src="Figure_1.png" alt="Loan Prediction Project Screenshot" class="project-image">
+    </div>
+
+</div>
+
+<footer>
+    <a href="index.html" class="cta">Back to Homepage</a>
+</footer>
+
+</body>
+</html>

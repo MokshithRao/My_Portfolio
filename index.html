@@ -24,18 +24,49 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#my-works">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact-me">Contact</a></li>
         </ul>
       </div>
     </nav>
     <div class="home-content" id="home">
-      <div class="name">
+      <div class="name" style="display: flex; flex-direction: column; align-items: center;">
         <h1>Hi, I'm Mokshith Rao Kasuganti Venkata</h1>
-        <h4>I'm a Student in MSIT program form IIIT Hyderabad</h4>
+        <h4>I'm a Student in MSDS program form IIIT Hyderabad</h4>
+        <button class="education-link" id="educationBtn" style="text-align:center; margin-top:1rem; margin-bottom:0.2rem; padding:0.7rem 2.2rem; font-size:1.1rem; border:none; border-radius:1.2rem; background:#25b79f; color:#fff; cursor:pointer; transition:background 0.2s; display:flex; flex-direction:column; align-items:center;">Educational Background
+          <span style="font-size:0.85rem; color:#e9e9e9; font-weight:400; margin-top:0.2rem;">Click here</span>
+        </button>
+        <div id="education-card" class="education-card" style="margin-left:auto; margin-right:auto;">
+          <h3 style="text-align:center;">EDUCATION</h3>
+          <ul style="list-style:none; padding-left:0;">
+            <li><span class="education-degree">Master of Science in Data Science</span>
+                <span class="education-institute">IIIT - Hyderabad</span>
+                <span class="education-year">2024 - Present</span></li>
+            <li><span class="education-degree">B.Tech</span>
+                <span class="education-institute">CMR Institute of Technology</span>
+                <span class="education-year">2020 - 2024</span>
+                <span class="education-year">CGPA - 7.70</span></li>
+            <li><span class="education-degree">INTERMEDIATE</span>
+                <span class="education-institute">NSR impulse Junior College</span>
+                <span class="education-year">2019 - 2020</span>
+                <span class="education-year">CGPA - 9.22</span></li>
+            <li><span class="education-degree">SSC</span>
+                <span class="education-institute">SR Prime School</span>
+                <span class="education-year">2017 - 2018</span>
+                <span class="education-year">CGPA - 9.2</span></li>
+          </ul>
+          <button id="closeEducationCard" style="margin-top:1rem; padding:0.5rem 1.5rem; border:none; border-radius:0.7rem; background:#e23d3d; color:#fff; font-size:1rem; cursor:pointer;">Close</button>
+        </div>
       </div>
       
       <div class="angle-down-icon">
-        <a href="#about"><i class="fas fa-angle-down"></i></a>
+        <a href="#about">
+          <!-- Down arrow icon only, no extra circle -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#07374a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down">
+            <polyline points="8 12 12 16 16 12" />
+            <line x1="12" y1="8" x2="12" y2="16" />
+          </svg>
+        </a>
       </div>
     </div>
   </header>
@@ -48,10 +79,9 @@
           </div> 
           <img src="me.jpg" alt="image" />
           <p>
-            I am an enthusiastic learner currently pursuing a Master of Science in Information Technology at the International Institute of Information Technology 
-            - Hyderabad. I constantly strive to enhance my knowledge and skills to improve my performance and explore new opportunities.
+            I am a motivated IT student currently pursuing a Master of Science in Data Science at the International Institute of Information Technology - Hyderabad. With expertise in Python, web development, MySQL, and machine learning, I am passionate about applying my problem-solving skills to AI-driven applications and data analytics. I continuously strive to deepen my knowledge and skills to contribute effectively in a growth-oriented organization.
           </p>
-          <div class="work-arrow">
+          <div class="work-arrow" style="display: flex; justify-content: center; align-items: center;">
             <p>
               <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
             </p>
@@ -59,54 +89,25 @@
         </div>
         
         <div class="skills" id="skills">
-          <div class="right-content">
-            <div>
-              <h1 class="skills-heading">My Skills</h1>
-            </div>
-            <div class="skills-bar">
-              <div class="bar">
-                <div class="info">
-                  <span>HTML</span>
-                </div>
-                <div class="bar">
-                  <div class="info">
-                    <span>CSS</span>
-                  </div>
-                  <div class="bar">
-                    <div class="info">
-                      <span>Python PROGRAMMING</span>
-                    </div>
-                    <div class="bar">
-                      <div class="info">
-                        <span>JAVASCRIPT</span>
-                      </div>
-                      <div class="bar">
-                        <div class="info">
-                          <span>C Programming</span>
-                        </div>
-                        <div class="bar">
-                          <div class="info">
-                            <span>MySql</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="work-arrow-2">
-              <p>
-                <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
-              </p>
-            </div>
+          <div class="skills-heading">SKILLS</div>
+          <ul class="skills-list" style="font-size:1.2rem; color:#07374a; margin:2rem 0 0 0; padding-left:1.5rem; list-style:none;">
+            <li><strong>Programming Languages:</strong> Python</li>
+            <li><strong>Web Technologies:</strong> HTML, CSS</li>
+            <li><strong>Database:</strong> MySQL</li>
+            <li><strong>Tools:</strong> Git/GitHub, Google Colab, MS Office, Figma</li>
+            <li><strong>Libraries:</strong> OpenCV, NumPy, Pandas, Scikit-learn, TensorFlow, Keras, PyTorch</li>
+          </ul>
+          <div class="work-arrow-2">
+            <p>
+              <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
+            </p>
           </div>
         </div>
       </div>
     </div>
  </section>
   <section id="my-works">
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="proj-heading">
         <h1>My Projects</h1>
       </div>
@@ -131,56 +132,58 @@
           <button><a href="project2.html" target="blank">View source <i
             class="fas fa-external-link-alt"></i></a></button>
         </div>
-        <!-- Add more cards as needed -->
+        <div class="card">
+          <h2>HandDino – Gesture-Controlled Chrome Dino Game using OpenCV</h2>
+          <p>Developed a computer vision-based controller to play the Chrome Dino game using real-time hand gestures detected via webcam.<br>
+          Used OpenCV to track motion and implemented gesture-based “jump” functionality with PyAutoGUI to simulate spacebar presses.<br>
+          Tuned HSV color thresholds to handle varying lighting conditions, improving gesture accuracy.</p>
+          <button><a href="https://github.com/MokshithRao/HandDino-project.git" target="_blank">View Source</a></button>
+        </div>
       </div>
     </div>
-    
-        </div>
-        <section id="varieties" class="sec-padding">
-            <h3 class="section-heading">Certifications</h3>
-            <div class="sec-content-div flexible">
-              <div class="tile">
-                <img src="infy.png" alt="" />
-                <h4>Infyspring</h4>
-                <p>
-                  
-                </p>
-              </div>
-              <div class="tile">
-                <img
-                  src="ggl.png"
-                  alt=""
-                />
-                <h4>Google Data Analytics</h4>
-                <p>
-                 
-                </p>
-              </div>
-              <div class="tile">
-                <img src="cloud.png" alt="" />
-                <h4>AWS Acadamy cloud Foundation</h4>
-                <p>
-                  
-                </p>
-              </div>
-              <div class="tile">
-                <img src="ml.png" alt="" />
-                <h4>AWS Acadamy Machine Learning</h4>
-                <p>
-                 
-                </p>
-              </div>
-              <div class="tile">
-                <img src="python.png" alt="" />
-                <h4>Python Coursera</h4>
-                <p>
-                  
-                </p>
-              </div>
-              
-            </div>
-          </section>
+  </section>
+  <section id="certifications" class="sec-padding">
+    <h3 class="section-heading">Certifications</h3>
+    <div class="sec-content-div flexible">
+      <div class="tile">
+        <img src="infy.png" alt="" />
+        <h4>Infyspring</h4>
+        <p>
+          
+        </p>
       </div>
+      <div class="tile">
+        <img
+          src="ggl.png"
+          alt=""
+        />
+        <h4>Google Data Analytics</h4>
+        <p>
+         
+        </p>
+      </div>
+      <div class="tile">
+        <img src="cloud.png" alt="" />
+        <h4>AWS Acadamy cloud Foundation</h4>
+        <p>
+          
+        </p>
+      </div>
+      <div class="tile">
+        <img src="ml.png" alt="" />
+        <h4>AWS Acadamy Machine Learning</h4>
+        <p>
+         
+        </p>
+      </div>
+      <div class="tile">
+        <img src="python.png" alt="" />
+        <h4>Python Coursera</h4>
+        <p>
+          
+        </p>
+      </div>
+      
     </div>
   </section>
   <div class="contact" id="contact-me">
@@ -235,6 +238,21 @@
 
     // Set the first link as active on page load, if desired
     $('a').first().addClass('active');
+
+    // Education card popup logic
+    const educationBtn = document.getElementById('educationBtn');
+    const educationCard = document.getElementById('education-card');
+    const closeEducationCard = document.getElementById('closeEducationCard');
+    if (educationBtn && educationCard && closeEducationCard) {
+      educationBtn.addEventListener('click', function() {
+        educationCard.style.display = educationCard.style.display === 'flex' ? 'none' : 'flex';
+      });
+      closeEducationCard.addEventListener('click', function() {
+        educationCard.style.display = 'none';
+      });
+      // Hide card on load
+      educationCard.style.display = 'none';
+    }
   });
 </script>
 

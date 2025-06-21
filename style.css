@@ -884,19 +884,26 @@ header {
 
 /* Education Card Styles */
 .education-link {
-  display: block;
-  color: var(--primary-green);
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7rem 2.2rem;
   font-size: 1.1rem;
-  margin: 5rem 0 0.5rem 0; /* Increased top margin to move oval button further down */
-  text-align: left;
+  border: none;
+  border-radius: 1.2rem;
+  background: var(--primary-green);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
   cursor: pointer;
-  text-decoration: none; /* Remove underline */
-  transition: color 0.2s;
-  z-index: 1;
-  position: relative;
+  transition: background 0.2s, color 0.2s;
 }
-.education-link:hover {
-  color: var(--primary-orange);
+.education-link:hover, .education-link:focus {
+  background: var(--primary-blue);
+  color: #fff;
+  box-shadow: none;
+  transform: none;
+  outline: none;
 }
 /* Education popup main container */
 .education-card {
@@ -1006,4 +1013,23 @@ header {
 .mail-link:hover, .mail-link:focus {
   color: var(--primary-green);
   text-decoration: underline solid;
+}
+.download-resume-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 1.2rem;
+  background: var(--primary-green);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.download-resume-btn:hover, .download-resume-btn:focus {
+  background: var(--primary-blue);
+  color: #fff;
 }

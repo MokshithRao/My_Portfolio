@@ -75,7 +75,10 @@ header {
 }
 .about-me {
   background-color: #1f5368;
-  padding: 3rem 1rem;
+  padding: 3rem 0 2rem 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 .about-me .about-heading {
   color: #25b79f;
@@ -112,6 +115,15 @@ header {
 }
 .about-content .right-content {
   flex-basis: 45%;
+  position: relative;
+}
+
+.skills {
+  background-color: #f0f0e6;
+  padding: 2rem 0 1.5rem 0;
+  border-radius: 1rem;
+  margin-bottom: 0;
+  box-shadow: none;
 }
 
 .skills-bar {
@@ -374,39 +386,40 @@ header {
 #varieties {
   background-color: #25b79f;
 }
+@media (max-width: 900px) {
 .tile {
-  background-color: #fafafa;
-  height: 40rem;
-  width: 25rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 0.5rem;
-  transition: all 0.2s;
-  padding: 1.5rem;
-  margin: 1.5rem;
-}
-@media (max-width: 680px) {
-.tile {
-    width: auto;
-    max-width: 100%;
-    min-width: 20rem;
-    margin: 1.5rem auto;
+    width: 90vw;
+    max-width: 98vw;
+    min-width: 12rem;
     height: auto;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    margin: 1.2rem auto;
+  }
+  .tile img {
+    max-width: 8rem;
+    height: 5rem;
   }
 }
 .tile img {
-  width: 100%;
-  max-width: 48rem;
+  width: 100%;              /* Increase width to full container */
+  max-width: 24rem;         /* Increased max width */
+  height: 14rem;            /* Increased height */
+  object-fit: contain;
   border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
 }
+
 .tile h4 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  padding: 1rem 0;
+  padding: 0.7rem 0 0.5rem 0;
   color: #e23d3d;
   margin: 0;
+  margin-top: auto;
+  align-self: center;
 }
 .tile p {
-  font-size: 1.6rem;
+  font-size: 1.05rem;
   padding: 0;
   margin: 0;
 }
@@ -436,6 +449,64 @@ header {
   max-width: 95rem;
   margin: 0 auto;
 }
+.sec-content-div.flexible {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.tile {
+  background-color: #fafafa;
+  height: 28rem;         /* Card height */
+  width: 25rem;          /* Card width */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.05rem;
+  justify-content: flex-start;
+  position: relative;
+}
+.tile img {
+  width: 100%;              /* Increase width to full container */
+  max-width: 26rem;         /* Increase max width */
+  height: 20rem;            /* Increase height */
+  object-fit: contain;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.tile h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.7rem 0 0.5rem 0;
+  color: #e23d3d;
+  margin: 0;
+  margin-top: auto;
+  align-self: center;
+}
+.tile p {
+  font-size: 1.05rem;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .sec-content-div.flexible {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tile {
+    width: 90vw;
+    max-width: 98vw;
+    height: 160px;
+    min-height: 120px;
+    max-height: 180px;
+  }
+}
 :root {
   
   font-family: "Open Sans", sans-serif;
@@ -460,14 +531,75 @@ header {
   text-align: center;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-items li {
+    padding: 0.5rem;
+  }
+  .home-content .name h1 {
+    font-size: 1.8rem;
+  }
+  .home-content .name p {
+    font-size: 1.2rem;
+  }
+  .about-content img {
+    height: 150px;
+    width: 150px;
+  }
+  .about-content p {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  .skills .skills-heading {
+    padding: 10px 50px;
+  }
+  .skills-bar {
+    padding: 10px 50px;
+  }
+}
 
-
+@media (max-width: 480px) {
+  .navbar-container {
+    height: auto;
+  }
+  .menu-items a {
+    font-size: 1rem;
+  }
+  .home-content .name h1 {
+    font-size: 1.5rem;
+  }
+  .home-content .name p {
+    font-size: 1rem;
+  }
+  .about-content img {
+    height: 120px;
+    width: 120px;
+  }
+  .about-content p {
+    font-size: 0.9rem;
+  }
+  .skills .skills-heading {
+    font-size: 1.5rem;
+  }
+  .skills-bar .bar .info span {
+    font-size: 0.9rem;
+  }
+}
 
 /* --------------- PROJECT SECTION -----------------*/
 /* Portfolio Section */
 .portfolio {
   background: #25b79f;
-  padding: 6rem 0;
+  padding: 2rem 0 6rem 0;
+  margin-top: 0;
 }
 
 .proj-heading h1 {
@@ -491,13 +623,18 @@ header {
 .card {
   background-color: #fbd9a9ba;
   height: auto;
-  width: 100%;
+  width: calc(33.333% - 2rem);
   max-width: 450px;
+  min-width: 250px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 0.5rem;
   transition: all 0.3s ease-in-out;
   padding: 1.5rem;
-  margin: 1.5rem;
+  margin: 1.5rem 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card h2 {
@@ -521,6 +658,8 @@ header {
   font-size: 1.1rem;
   color: #07374a;
   transition: 0.3s ease-in-out;
+  margin-top: auto;
+  align-self: flex-end;
 }
 
 .card button a {
@@ -542,6 +681,72 @@ header {
   color: #f0f0e6;
 }
 
+/* Certification Card Styling */
+.certifications {
+  background: #f0f0e6;
+  padding: 4rem 0;
+}
+.cert-heading h1 {
+  text-align: center;
+  color: #07374a;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.cert-card {
+  background-color: #fff;
+  width: 100%;
+  max-width: 260px;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border-radius: 0.7rem;
+  transition: 0.2s;
+  padding: 1rem 0.7rem 1.2rem 0.7rem;
+  margin: 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cert-card h3 {
+  font-size: 1rem;
+  color: #07374a;
+  margin-bottom: 0.5rem;
+}
+.cert-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+.cert-card a {
+  margin-top: auto;
+  color: #25b79f;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+.cert-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.13);
+}
+@media (max-width: 900px) {
+  .cert-container {
+    gap: 0.7rem;
+    padding: 0.5rem;
+  }
+  .cert-card {
+    max-width: 95vw;
+    min-width: 140px;
+    padding: 0.7rem 0.5rem 1rem 0.5rem;
+  }
+}
+
 /* Responsive Styles for s */
 @media (max-width: 680px) {
   .card {
@@ -552,9 +757,160 @@ header {
   }
 }
 
+@media (max-width: 1100px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+@media (max-width: 800px) {
+  .proj-container {
+    padding: 2rem;
+    gap: 1rem;
+  }
+  .card {
+    width: 100%;
+    min-width: 200px;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
+
 
 
 .navbar a.active {
   background-color: #f0f0f0; /* Change this to your desired highlight color */
   color: #333; /* Change this to your desired text color */
+  border-radius: 1.2rem; /* Make highlight button curved */
+  transition: border-radius 0.2s;
+}
+
+@media (min-width: 1201px) {
+  .about-me .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills {
+    margin: 0 auto 2rem auto;
+    max-width: 900px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .about-me .about-content,
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+  }
+}
+@media (max-width: 768px) {
+  .about-me .about-content,
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 2rem auto;
+  }
+}
+
+.card img {
+  width: 100%;
+  max-width: 18rem;
+  height: 12rem;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Education Card Styles */
+.education-link {
+  display: block;
+  color: #25b79f;
+  font-size: 1.1rem;
+  margin: 5rem 0 0.5rem 0; /* Increased top margin to move oval button further down */
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.2s;
+  z-index: 1;
+  position: relative;
+}
+.education-link:hover {
+  color: #e23d3d;
+}
+.education-card {
+  display: none;
+  background: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+  padding: 2rem 2.5rem 1.5rem 2.5rem; /* Top, right, bottom, left */
+  margin: 1.2rem 0;
+  max-width: 420px;
+  min-height: 320px; /* Ensure card is tall enough to clear the oval button */
+  font-size: 1.1rem;
+  color: #07374a;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  z-index: 1001;
+  animation: fadeInPopup 0.35s;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Remove extra bottom padding so card height is natural */
+}
+#closeEducationCard {
+  margin-top: 2.2rem;
+  margin-bottom: 0.2rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.7rem;
+  background: #e23d3d;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+.education-card ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.education-card li {
+  margin-bottom: 1.2rem;
+  padding-left: 0;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.education-degree, .education-institute, .education-year {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.education-degree {
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: #07374a;
+  margin-bottom: 0.1rem;
+}
+.education-institute {
+  font-size: 1rem;
+  color: #25b79f;
+  margin-bottom: 0.1rem;
+}
+.education-year {
+  font-size: 0.98rem;
+  color: #888;
+  margin-bottom: 0.1rem;
 }

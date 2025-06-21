@@ -840,59 +840,41 @@ header {
 .education-link:hover {
   color: #e23d3d;
 }
+/* Education popup main container */
 .education-card {
+  margin-left: auto;
+  margin-right: auto;
   display: none;
-  background: #fafafa;
-  border-radius: 1rem;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
-  padding: 2rem 2.5rem 1.5rem 2.5rem; /* Top, right, bottom, left */
-  margin: 1.2rem 0;
-  max-width: 420px;
-  min-height: 320px; /* Ensure card is tall enough to clear the oval button */
-  font-size: 1.1rem;
-  color: #07374a;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.95);
-  z-index: 1001;
-  animation: fadeInPopup 0.35s;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  /* Remove extra bottom padding so card height is natural */
 }
-#closeEducationCard {
-  margin-top: 2.2rem;
-  margin-bottom: 0.2rem;
-  padding: 0.5rem 1.5rem;
-  border: none;
-  border-radius: 0.7rem;
-  background: #e23d3d;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 2;
-  position: relative;
-}
-.education-card ul {
+.education-card h3 {
   text-align: center;
-  margin: 0;
-  padding: 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.education-card li {
-  margin-bottom: 1.2rem;
-  padding-left: 0;
-  line-height: 1.5;
+/* Row for education cards */
+.education-cards-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
+/* Individual education card */
+.education-entry {
+  background: #f7f7f7;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #e0e0e0;
+  padding: 1rem 1.5rem;
+  min-width: 200px;
+  max-width: 220px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .education-degree, .education-institute, .education-year {
   display: block;
   width: 100%;
@@ -913,4 +895,47 @@ header {
   font-size: 0.98rem;
   color: #888;
   margin-bottom: 0.1rem;
+}
+
+/* Big card container for all education cards */
+.education-cards-outer {
+  background: linear-gradient(135deg, #e0f7fa 0%, #25b79f 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px #e0e0e0;
+  padding: 2rem 2rem 1.5rem 2rem;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 950px;
+  position: relative;
+}
+
+/* Close 'X' button for education popup */
+.close-x {
+  position: absolute;
+  top: 3.4rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e23d3d;
+  background: #fff;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #e0e0e0;
+  z-index: 10;
+  transition: background 0.2s, color 0.2s;
+}
+.close-x:hover {
+  background: #e23d3d;
+  color: #fff;
+}
+.education-card {
+  position: relative;
 }

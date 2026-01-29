@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch(`https://api-inference.huggingface.co/${endpoint}`, {
+    const response = await fetch(`https://router.huggingface.co/${endpoint}`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
@@ -34,3 +34,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error: error.message });
   }
 }
+

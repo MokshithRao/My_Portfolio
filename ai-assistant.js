@@ -8,13 +8,7 @@
 
 class AIPortfolioAssistant {
   constructor() {
-    // Load API key from config.js (environment configuration)
-    this.apiKey = (typeof CONFIG !== 'undefined' && CONFIG.HUGGINGFACE_API_KEY && CONFIG.HUGGINGFACE_API_KEY !== 'YOUR_HUGGINGFACE_API_KEY_HERE') 
-      ? CONFIG.HUGGINGFACE_API_KEY 
-      : null;
-    this.modelEndpoint = (typeof CONFIG !== 'undefined' && CONFIG.MODEL_ENDPOINT) 
-      ? CONFIG.MODEL_ENDPOINT 
-      : 'https://router.huggingface.co/v1/chat/completions';
+    // Model name from config.js
     this.modelName = (typeof CONFIG !== 'undefined' && CONFIG.MODEL_NAME)
       ? CONFIG.MODEL_NAME
       : 'meta-llama/Llama-3.2-3B-Instruct';
@@ -175,12 +169,8 @@ class AIPortfolioAssistant {
   }
 
   loadApiKey() {
-    // API key is loaded from config.js in constructor
-    if (this.apiKey) {
-      this.showChatInterface();
-    } else {
-      this.showConfigError();
-    }
+    // No API key required on frontend for secure backend approach
+    this.showChatInterface();
   }
 
   showConfigError() {
@@ -302,10 +292,6 @@ class AIPortfolioAssistant {
     const message = input.value.trim();
     
     if (!message || this.isTyping) return;
-    if (!this.apiKey) {
-      this.addMessage('Please set up your API key first.', 'assistant');
-      return;
-    }
 
     // Clear input
     input.value = '';
@@ -356,21 +342,21 @@ class AIPortfolioAssistant {
       content: userMessage
     });
 
-    console.log('Calling API with endpoint:', this.modelEndpoint);
-    console.log('Using model:', this.modelName);
-    
-    const response = await fetch(this.modelEndpoint, {
+    console.log('Calling backend /api/huggingface for model:', this.modelName);
+    const response = await fetch('/api/huggingface', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.apiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: this.modelName,
-        messages: messages,
-        max_tokens: 500,
-        temperature: 0.7,
-        top_p: 0.9
+        endpoint: 'v1/chat/completions',
+        body: {
+          model: this.modelName,
+          messages: messages,
+          max_tokens: 500,
+          temperature: 0.7,
+          top_p: 0.9
+        }
       })
     });
 

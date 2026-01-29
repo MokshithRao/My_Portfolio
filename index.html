@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700,300|Quattrocento" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
- 
+  <!-- AI Portfolio Assistant Configuration (API keys) -->
+  <script src="config.js"></script>
+  <!-- AI Portfolio Assistant -->
+  <script src="ai-assistant.js" defer></script>
 </head>
 
 <body>
@@ -146,8 +150,14 @@
           Used OpenCV to track motion and implemented gesture-based “jump” functionality with PyAutoGUI to simulate spacebar presses.<br>
           Tuned HSV color thresholds to handle varying lighting conditions, improving gesture accuracy.</p>
           <button><a href="https://github.com/MokshithRao/HandDino-project.git" target="_blank">View Source</a></button>
-        </div>
-      </div>
+        </div>        <div class="card">
+          <h2>AI Portfolio Assistant (LLM-Based)</h2>
+          <p>Developed a personal portfolio website with integrated LLM-powered walkthroughs using meta-llama/Llama-3.2-3B-Instruct model for interactive user guidance.<br>
+          Implemented a responsive AI chat widget, enabling visitors to ask questions and receive real-time, context-aware explanations about portfolio content.<br>
+          Combined modern web technologies (HTML, CSS, JavaScript) with advanced AI/ML capabilities to enhance user engagement and accessibility.<br>
+          Ensured secure and scalable API integration, following best practices for frontend-backend communication and user privacy.</p>
+          <button onclick="document.getElementById('ai-toggle-btn').click();">Try AI Assistant <i class="fas fa-robot"></i></button>
+        </div>      </div>
     </div>
   </section>
   <section id="certifications" class="sec-padding">
